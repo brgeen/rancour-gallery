@@ -5,13 +5,27 @@ import axios from 'axios';
 class App extends Component {
 
   componentDidMount() {
-
     this.galleryList();
   }
 
   state = {
     galleryList: [],
   };
+
+  likeButton(imageIdForLike) { 
+    console.log('clicked');
+    
+    axios({
+      method: 'PUT',
+      url: `/gallery/like/${imageIdForLike}`,
+    })
+      .then((response) => {
+       this.galleryList();
+      })
+      .catch((error) => {
+        console.log('error on GET', error);
+      })
+  }
 
   galleryList() { // we do this outside of render becuase of lifecycle, in render, every change runs render
     // http request to get songs
@@ -37,15 +51,14 @@ class App extends Component {
         <br/>
       
   
-        <div>{this.state.galleryList.map(item => (
-          <>
-          
-          <img src={item.path} />
+        {this.state.galleryList.map(item => (
+          <div key={item.id}>
+          <img src={item.path} alt={item.path} />
           <p>{item.description}</p>
-          <button key={item.id}>Love it!</button>
+          <button onClick={() => this.likeButton(item.id)} >Love it!</button>
           <p>Likes: {item.likes}</p>
-          </>
-        ))}</div>
+          </div>
+        ))}
       </div>
     );
   }
