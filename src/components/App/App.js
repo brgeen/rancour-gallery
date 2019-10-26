@@ -15,17 +15,7 @@ class App extends Component {
 
 
 
-  imageTextContainerClick(id) {
-    this.setState({
-      imageTextContainer: !this.state.imageTextContainer,
-      imageTextContainerId: id,
-    })
 
-    console.log(this.state.imageTextContainer);
-    console.log(this.state.imageTextContainerId);
-
-
-  }
   render() {
     return (
       <div className="App">

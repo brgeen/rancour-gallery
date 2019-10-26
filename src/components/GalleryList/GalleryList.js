@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import GalleryItem from '../GalleryItem/GalleryItem'
 
 
 class GalleryList extends Component {
@@ -52,8 +53,9 @@ class GalleryList extends Component {
         {this.state.galleryList.map(item => (
           <div key={item.id}>
             
-            <img src={item.path} alt={item.path} />
-            <p>{item.description}</p>
+          <GalleryItem
+          galleryItemProps={item}
+          />
             
 
 
