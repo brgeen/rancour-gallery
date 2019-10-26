@@ -10,17 +10,18 @@ class App extends Component {
 
   state = {
     galleryList: [],
+    imageTextContainer: true,
   };
 
-  likeButton(imageIdForLike) { 
+  likeButton(imageIdForLike) {
     console.log('clicked');
-    
+
     axios({
       method: 'PUT',
       url: `/gallery/like/${imageIdForLike}`,
     })
       .then((response) => {
-       this.galleryList();
+        this.galleryList();
       })
       .catch((error) => {
         console.log('error on GET', error);
@@ -35,12 +36,23 @@ class App extends Component {
     })
       .then((response) => {
         this.setState({
-            galleryList: response.data
+          galleryList: response.data
         })
       })
       .catch((error) => {
         console.log('error on GET', error);
       })
+  }
+
+  imageTextContainerClick(id) {
+    this.setState({
+      imageTextContainer: !this.state.imageTextContainer,
+    })
+
+    console.log(this.state.imageTextContainer);
+    console.log(id);
+
+
   }
   render() {
     return (
@@ -48,15 +60,23 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Gallery of my life</h1>
         </header>
-        <br/>
-      
-  
+        <br />
+
+
         {this.state.galleryList.map(item => (
           <div key={item.id}>
-          <img src={item.path} alt={item.path} />
-          <p>{item.description}</p>
-          <button onClick={() => this.likeButton(item.id)} >Love it!</button>
-          <p>Likes: {item.likes}</p>
+            <div
+            onClick={() => this.imageTextContainerClick(item.id)}
+            className="imageTextContainer">
+              {this.state.imageTextContainer ? <img src={item.path} alt={item.path} /> : <p>{item.description}</p> }
+
+
+
+            </div>
+            
+            
+            <button onClick={() => this.likeButton(item.id)} >Love it!</button>
+            <p>Likes: {item.likes}</p>
           </div>
         ))}
       </div>
