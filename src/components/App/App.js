@@ -5,17 +5,6 @@ import GalleryList from '../GalleryList/GalleryList'
 
 class App extends Component {
 
-  componentDidMount() {
-    
-  }
-
-
-
-
-
-
-
-
   render() {
     return (
       <div className="App">
@@ -24,10 +13,9 @@ class App extends Component {
         </header>
         <br />
 
-        <GalleryList 
-  
+        <GalleryList
         />
-       
+
       </div>
     );
   }

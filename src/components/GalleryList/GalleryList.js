@@ -4,18 +4,16 @@ import GalleryItem from '../GalleryItem/GalleryItem'
 
 
 class GalleryList extends Component {
+
   componentDidMount() {
     this.galleryList();
   }
 
   state = {
     galleryList: [],
-    imageTextContainer: true,
-    imageTextContainerId: 0,
   };
 
-  galleryList() { // we do this outside of render becuase of lifecycle, in render, every change runs render
-    // http request to get songs
+  galleryList() {
     axios({
       method: 'GET',
       url: '/gallery',
@@ -31,8 +29,6 @@ class GalleryList extends Component {
   }
 
   likeButton(imageIdForLike) {
-    console.log('clicked');
-
     axios({
       method: 'PUT',
       url: `/gallery/like/${imageIdForLike}`,
@@ -48,20 +44,13 @@ class GalleryList extends Component {
   render() {
     return (
       <div className="App">
-      
 
         {this.state.galleryList.map(item => (
           <div key={item.id}>
-            
-          <GalleryItem
-          galleryItemProps={item}
-          />
-            
 
-
-            
-
-
+            <GalleryItem
+              galleryItemProps={item}
+            />
             <button onClick={() => this.likeButton(item.id)} >Love it!</button>
             <p>Likes: {item.likes}</p>
           </div>
