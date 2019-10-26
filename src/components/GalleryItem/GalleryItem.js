@@ -4,37 +4,38 @@ import React, { Component } from 'react';
 
 class GalleryItem extends Component {
 
-    imageTextContainerClick(id) {
+    state = {
+        imageTextContainer: true,
+      };
+    
+
+    imageTextContainerClick() {
         this.setState({
           imageTextContainer: !this.state.imageTextContainer,
-          imageTextContainerId: id,
+          
         })
     
-        console.log(this.state.imageTextContainer);
-        console.log(this.state.imageTextContainerId);
+
     
     
       }
  
 
-  state = {
-    imageTextContainer: true,
-  };
-
+ 
   
 
 
   render() {
     return (
-      <div className="imageTextContainer">
+      <div onClick={() => this.imageTextContainerClick()} className="imageTextContainer">
       
 
         
 
-          
+          {this.state.imageTextContainer ? <img src={this.props.galleryItemProps.path} alt={this.props.galleryItemProps.path} /> : <p>{this.props.galleryItemProps.description}</p> }
             
-            <img src={this.props.galleryItemProps.path} alt={this.props.galleryItemProps.path} />
-            <p>{this.props.galleryItemProps.description}</p>
+            
+            
             
 
 
