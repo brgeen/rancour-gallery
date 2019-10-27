@@ -3,6 +3,13 @@
   background-color: rgb(255, 252, 248);
 }
 
+h1 {
+  font-size: 34px;
+  text-align: center;
+  padding-bottom: 25px;
+  padding-top: 20px;
+}
+
 
 .imageAndTextContainer {
   display: flex;
@@ -30,13 +37,13 @@
 }
 
 button {
+  color: azure;
   width: 80px;
-  /* margin-top: 10px; */
-  background-color: rgb(0, 215, 95);
+  background-color: rgba(54, 54, 54, 0.849);
   border-style: solid;
-  border-color: rgb(0, 215, 95);
+  border-color: rgb(214, 214, 214);
   padding: 5px;
-  border-radius: 40px;
+  border-radius: 5px;
   outline: none;
 }
 
