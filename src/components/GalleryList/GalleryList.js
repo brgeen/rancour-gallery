@@ -43,7 +43,7 @@ class GalleryList extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="galleryItemContainer">
 
         {this.state.galleryList.map(item => (
           <div key={item.id}>
@@ -52,7 +52,7 @@ class GalleryList extends Component {
               galleryItemProps={item}
             />
             <button onClick={() => this.likeButton(item.id)} >Love it!</button>
-            <p>Likes: {item.likes}</p>
+            <p>{item.likes} people love it!</p>
           </div>
         ))}
       </div>

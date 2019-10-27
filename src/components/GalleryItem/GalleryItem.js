@@ -14,7 +14,7 @@ class GalleryItem extends Component {
 
     render() {
         return (
-            <div onClick={() => this.imageTextContainerClick()} className="imageTextContainer">
+            <div onClick={() => this.imageTextContainerClick()} className="imageAndTextContainer">
 
                 {this.state.imageTextContainer ? // single ternary split up on multiple lines
                     <img src={this.props.galleryItemProps.path} alt={this.props.galleryItemProps.path} /> :
