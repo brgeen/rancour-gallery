@@ -3,6 +3,14 @@
   background-color: rgb(255, 252, 248);
 }
 
+body {
+  margin: 0;
+  padding-bottom: 40px;
+  padding-top: 15px;
+  font-family: sans-serif;
+  background-color: rgb(255, 252, 248);
+}
+
 h1 {
   font-size: 35px;
   text-align: center;

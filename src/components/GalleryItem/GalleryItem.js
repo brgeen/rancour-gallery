@@ -18,7 +18,7 @@ class GalleryItem extends Component {
 
                 {this.state.imageTextContainer ? // single ternary split up on multiple lines
                     <img src={this.props.galleryItemProps.path} alt={this.props.galleryItemProps.path} /> :
-                    <p>{this.props.galleryItemProps.description.map(element => (
+                    <p>{this.props.galleryItemProps.description.map(element => ( // mapping the description object to the DOM
                         <div className="galleryItemDescriptionContainer">
                             <p>{element.artist}</p>
                             <p>{element.title}</p>

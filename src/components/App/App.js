@@ -10,13 +10,11 @@ class App extends Component {
       <div className="app">
         <header >
           <h1 >RANCOUR GALLERY</h1>
-        </header>
 
-        
+        </header>
           <GalleryList
           />
-        
-
+          
       </div>
     );
   }

@@ -47,7 +47,6 @@ class GalleryList extends Component {
 
         {this.state.galleryList.map(item => (
           <div key={item.id}>
-
             <GalleryItem
               galleryItemProps={item}
             />
@@ -55,6 +54,7 @@ class GalleryList extends Component {
             <p>{item.likes} people love it!</p>
           </div>
         ))}
+
       </div>
     );
   }
