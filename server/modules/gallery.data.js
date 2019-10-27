@@ -18,7 +18,7 @@ const galleryItems = [
         description: [{
             artist: 'Brooks Geenen',
             title: 'Deforest, Wisconsin. 2018',
-            dimensions: '32 x 40 inches',
+            dimensions: '24 x 30 inches',
             media: 'Archival Pigment Print',
         }],
     },
@@ -29,7 +29,7 @@ const galleryItems = [
         description: [{
             artist: 'Brooks Geenen',
             title: 'Elmwood, Wisconsin. 2018',
-            dimensions: '32 x 40 inches',
+            dimensions: '24 x 30 inches',
             media: 'Archival Pigment Print',
         }],
     },
@@ -51,7 +51,7 @@ const galleryItems = [
         description: [{
             artist: 'Brooks Geenen',
             title: 'Hickory Lane, Wisconsin. 2018',
-            dimensions: '32 x 40 inches',
+            dimensions: '24 x 30 inches',
             media: 'Archival Pigment Print',
         }],
     },
@@ -73,7 +73,7 @@ const galleryItems = [
         description: [{
             artist: 'Brooks Geenen',
             title: 'Parkland Village, Minnesota. 2018',
-            dimensions: '32 x 40 inches',
+            dimensions: '24 x 30 inches',
             media: 'Archival Pigment Print',
         }],
     },
@@ -84,7 +84,7 @@ const galleryItems = [
         description: [{
             artist: 'Brooks Geenen',
             title: 'Quaking Bog, Minnesota. 2018',
-            dimensions: '32 x 40 inches',
+            dimensions: '24 x 30 inches',
             media: 'Archival Pigment Print',
         }],
     },
@@ -106,7 +106,7 @@ const galleryItems = [
         description: [{
             artist: 'Brooks Geenen',
             title: 'Cannon City, Minnesota. 2018',
-            dimensions: '32 x 40 inches',
+            dimensions: '24 x 30 inches',
             media: 'Archival Pigment Print',
         }],
     },
