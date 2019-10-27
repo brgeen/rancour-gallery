@@ -11,10 +11,10 @@ class App extends Component {
         <header >
           <h1 >RANCOUR GALLERY</h1>
         </header>
-        
-          <GalleryList
-          />
-          
+
+        <GalleryList
+        />
+
       </div>
     );
   }
