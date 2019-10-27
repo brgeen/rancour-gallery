@@ -1,5 +1,7 @@
-/* body {
+body {
   margin: 0;
-  padding: 0;
+  padding-bottom: 40px;
+  padding-top: 15px;
   font-family: sans-serif;
-} */
+  background-color: rgb(255, 252, 248);
+}
