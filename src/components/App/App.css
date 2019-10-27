@@ -3,21 +3,23 @@
   background-color: rgb(255, 252, 248);
 }
 
+header {
+  padding-top: 45px;
+  padding-bottom: 10px;
+}
+
 body {
   margin: 0;
   padding-bottom: 40px;
-  padding-top: 15px;
   font-family: sans-serif;
   background-color: rgb(255, 252, 248);
 }
 
 h1 {
-  font-size: 35px;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 38px;
   text-align: center;
-  padding-bottom: 25px;
-  padding-top: 20px;
 }
-
 
 .imageAndTextContainer {
   display: flex;
@@ -32,6 +34,7 @@ h1 {
   margin-bottom: 15px;
   box-shadow: 1px 1px 10px 1px #8888888a;
   background-color: rgba(240, 240, 240, 0.479);
+  cursor: pointer;
 }
 
 .galleryItemDescriptionContainer{
@@ -41,6 +44,7 @@ h1 {
 }
 
 .galleryItemContainer {
+  padding-top: 30px;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -59,6 +63,7 @@ button {
   padding: 5px;
   border-radius: 5px;
   outline: none;
+  cursor: pointer;
 }
 
 
