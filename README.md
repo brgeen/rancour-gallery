@@ -25,7 +25,8 @@ This is a gallery template for photographers and visual artists. It uses a simpl
 
 ## Installation
 
-- Heroku deployment and link coming soon
+- Visit Heroku at
+- https://rancour-gallery.herokuapp.com/
 
 
 ## Contact
